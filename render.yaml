@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: myai-gateway
+    runtime: node
+    region: oregon
+    plan: free
+    buildCommand: >
+      npm install -g pnpm &&
+      pnpm install --frozen-lockfile &&
+      cd artifacts/api-server && pnpm run build &&
+      cd ../dashboard && BASE_PATH=/ pnpm run build &&
+      cd ../../lib/db && pnpm exec drizzle-kit push --force
+    startCommand: node artifacts/api-server/dist/index.mjs
+    healthCheckPath: /api/healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GROQ_API_KEY
+        sync: false
+      - key: API_KEY
+        sync: false
+      - key: DATABASE_URL
+        sync: false

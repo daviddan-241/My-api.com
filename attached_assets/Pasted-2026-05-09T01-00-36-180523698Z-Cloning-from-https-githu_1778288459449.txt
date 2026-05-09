@@ -1,0 +1,32 @@
+2026-05-09T01:00:36.180523698Z ==> Cloning from https://github.com/daviddan-241/My-api.com
+2026-05-09T01:00:36.763006729Z ==> Checking out commit 0e962672b20ed12e80e5ed0804466a0bdd9aa841 in branch main
+2026-05-09T01:00:38.23192253Z ==> Using Node.js version 24.14.1 (default)
+2026-05-09T01:00:38.255160833Z ==> Docs on specifying a Node.js version: https://render.com/docs/node-version
+2026-05-09T01:00:40.174119192Z ==> Running build command 'npm install -g pnpm && pnpm install --frozen-lockfile && pnpm --filter @workspace/api-server run build'...
+2026-05-09T01:00:41.197399443Z 
+2026-05-09T01:00:41.197425693Z added 1 package in 958ms
+2026-05-09T01:00:41.197430193Z 
+2026-05-09T01:00:41.197467294Z 1 package is looking for funding
+2026-05-09T01:00:41.197531706Z   run `npm fund` for details
+2026-05-09T01:00:41.856188043Z Scope: all 9 workspace projects
+2026-05-09T01:00:41.919117814Z Lockfile is up to date, resolution step is skipped
+2026-05-09T01:00:41.965368084Z Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-05-09T01:00:42.012907855Z Packages: +486
+2026-05-09T01:00:42.012932745Z ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-05-09T01:00:42.965635397Z Progress: resolved 486, reused 0, downloaded 112, added 96
+2026-05-09T01:00:43.969443488Z Progress: resolved 486, reused 0, downloaded 282, added 244
+2026-05-09T01:00:44.969523847Z Progress: resolved 486, reused 0, downloaded 292, added 244
+2026-05-09T01:00:45.970693313Z Progress: resolved 486, reused 0, downloaded 362, added 281
+2026-05-09T01:00:46.970475534Z Progress: resolved 486, reused 0, downloaded 464, added 318
+2026-05-09T01:00:47.406593128Z Progress: resolved 486, reused 0, downloaded 486, added 486, done
+2026-05-09T01:00:47.662609226Z 
+2026-05-09T01:00:47.662631696Z devDependencies:
+2026-05-09T01:00:47.662635336Z + prettier 3.8.1
+2026-05-09T01:00:47.662638947Z + typescript 5.9.3
+2026-05-09T01:00:47.662641517Z 
+2026-05-09T01:00:47.69769348Z . preinstall$ sh -c 'rm -f package-lock.json yarn.lock; case "$npm_config_user_agent" in pnpm/*) ;; *) echo "Use pnpm instead" >&2; exit 1 ;; esac'
+2026-05-09T01:00:47.728082149Z . preinstall: Use pnpm instead
+2026-05-09T01:00:47.729685919Z . preinstall: Failed
+2026-05-09T01:00:47.739151702Z [ELIFECYCLE] Command failed with exit code 1.
+2026-05-09T01:00:47.895902583Z ==> Build failed 😞
+2026-05-09T01:00:47.895927954Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
