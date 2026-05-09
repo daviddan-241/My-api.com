@@ -33,8 +33,8 @@ outputType = "webview"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "cd artifacts/api-server && PORT=8080 pnpm run start"
-waitForPort = 8080
+args = "pnpm install --frozen-lockfile && BASE_PATH=\"/\" pnpm --filter @workspace/dashboard run build && pnpm --filter @workspace/api-server run build && PORT=5000 node artifacts/api-server/dist/index.mjs"
+waitForPort = 5000
 
 [[workflows.workflow]]
 name = "Push to GitHub"
@@ -70,6 +70,10 @@ externalPort = 3001
 [[ports]]
 localPort = 23183
 externalPort = 3000
+
+[[ports]]
+localPort = 5000
+externalPort = 80
 
 [userenv]
 

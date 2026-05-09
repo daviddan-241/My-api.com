@@ -10,19 +10,12 @@ fi
 REMOTE_URL="https://${TOKEN}@github.com/daviddan-241/My-api.com.git"
 REPO="https://github.com/daviddan-241/My-api.com"
 
-echo "Creating clean snapshot for push..."
-ORIG_BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "main")
+echo "Pushing all files to $REPO ..."
 
-git checkout --orphan _push_temp 2>/dev/null || git checkout _push_temp
 git add -A
 git -c user.email="agent@replit.com" -c user.name="Replit Agent" \
-  commit -m "MyAI Gateway — full project push for Render deployment" || true
+  commit -m "MyAI Gateway — full project sync" || echo "Nothing new to commit"
 
-echo "Pushing to $REPO ..."
-git push --force "$REMOTE_URL" _push_temp:main
-
-echo "Cleaning up..."
-git checkout "$ORIG_BRANCH"
-git branch -D _push_temp
+git push --force "$REMOTE_URL" HEAD:main
 
 echo "Done! Code is live at $REPO"
